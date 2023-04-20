@@ -18,11 +18,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 @SpringBootTest
-
 public class CourseBaseMapperTests {
 
     @Autowired
-    CourseBaseMapper courseBaseMapper;
+    private CourseBaseMapper courseBaseMapper;
 
     @Test
     void testCouseBaseMapper(){
