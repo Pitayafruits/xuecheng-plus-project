@@ -8,6 +8,7 @@ import com.xuecheng.content.service.CouseBaseInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +25,7 @@ public class CourseBaseInfoController {
     CouseBaseInfoService couseBaseInfoService;
 
     @ApiOperation("课程查询接口")
-    @RequestMapping("/course/list")
+    @PostMapping("/course/list")
     public PageResult<CourseBase> list(PageParms pageParms, @RequestBody(required = false) QueryCourseParamsDto queryCourseParamsDto){
         PageResult<CourseBase> courseBasePageResult = couseBaseInfoService.queryCourseBaseList(pageParms, queryCourseParamsDto);
         return courseBasePageResult;
