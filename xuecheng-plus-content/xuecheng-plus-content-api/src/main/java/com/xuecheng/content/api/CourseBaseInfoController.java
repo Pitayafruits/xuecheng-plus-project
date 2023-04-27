@@ -10,6 +10,7 @@ import com.xuecheng.content.service.CouseBaseInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,7 +35,7 @@ public class CourseBaseInfoController {
 
     @ApiOperation("新增课程基本信息")
     @PostMapping("/course")
-    public CourseBaseInfoDto createCourseBase(@RequestBody AddCourseDto addCourseDto){
+    public CourseBaseInfoDto createCourseBase(@RequestBody @Validated AddCourseDto addCourseDto){
         Long companyId = 1232141425L;
         return couseBaseInfoService.createCourseBase(companyId,addCourseDto);
     }
