@@ -1,4 +1,4 @@
-package com.xuecheng.base.exception;
+package com.xuecheng.base.execption;
 
 /**
  * 本项目自定义异常类型

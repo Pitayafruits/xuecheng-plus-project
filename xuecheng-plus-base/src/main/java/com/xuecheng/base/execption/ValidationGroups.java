@@ -1,4 +1,4 @@
-package com.xuecheng.base.exception;
+package com.xuecheng.base.execption;
 
 /**
  * 校验分组

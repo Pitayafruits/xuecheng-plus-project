@@ -17,4 +17,6 @@ public interface CouseBaseInfoService {
 
     //添加课程基本信息接口
     CourseBaseInfoDto createCourseBase(Long companyId, AddCourseDto addCourseDto);
+
+
 }
